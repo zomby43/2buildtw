@@ -1,12 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: [
+    "./index.html",              // Archivo HTML principal en la raíz
+    "./src/**/*.{html,js}"       // Todos los archivos dentro de /src/
+  ],
   theme: {
     extend: {
-    fontFamily: { 
+      fontFamily: { 
         "lato": ['Lato', 'sans-serif']
-        }
+      }
     },
   },
-  plugins: [],
+  plugins: [
+    require('daisyui'),
+  ],
 }
